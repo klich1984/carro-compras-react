@@ -12,10 +12,20 @@ const styles = {
 }
 
 class BubbleAlert extends Component {
+	// Metodo que mostrara el numero de elementos agregados al carrito
+	getNumber(n) {
+		if (!n)
+			return ''
+		return n > 9 ? '9+' : n
+	}
+
 	render() {
+		// Capturo las propiedades
+		const { value } = this.props
+
 		return (
 			<span style={styles.bubbleAlert}>
-				9
+				{this.getNumber(value)}
 			</span>
 		)
 	}
