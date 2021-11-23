@@ -1,3 +1,14 @@
+# React Shopping cart
+
+Implementation of a simple store with a shopping cart in react
+
+---
+
+Website: [Clicl here](https://reac-tshop-klich.netlify.app/)
+
+Images Proyect
+
+!(View principal)[src/images/view1.png]
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
