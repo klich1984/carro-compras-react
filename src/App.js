@@ -15,7 +15,9 @@ class App extends Component {
 		// Estado inicial del carrito de compras
 		carro: [
 			// { name: 'Tomate', price: '1500', img: '/productos/tomate.jpg', cantidad: 1 },
-		]
+		],
+		// Estado para saber si se muestra o no los productos del carro
+		esCarroVisible: false,
 	}
 
 
@@ -44,11 +46,24 @@ class App extends Component {
 		})
 	}
 
+	mostrarCarro = () => {
+		// Si no hay productos en el carro no cambie el estado
+		if (!this.state.carro.length)
+			return
+
+		this.setState({ esCarroVisible: !this.state.esCarroVisible })
+	}
+
 	render() {
-		console.log(this.state.carro)
+		// console.log(this.state.carro)
+		const { esCarroVisible } = this.state
 		return (
 			<div>
-				<Navbar />
+				<Navbar
+					carro={this.state.carro}
+					esCarroVisible={esCarroVisible}
+					mostrarCarro={this.mostrarCarro}
+				/>
 				<Layout>
 					{/* Componente Productos */}
           <Title />
