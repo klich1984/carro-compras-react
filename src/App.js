@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Layout from './components/Layout'
 import Productos from './components/Productos'
+import Title from './components/Title'
 
 class App extends Component {
 	// Estado inicial de productos
@@ -16,6 +17,7 @@ class App extends Component {
 			<div>
 				<Layout>
 					{/* Componente Productos */}
+          <Title />
 					<Productos
 						agregarAlCarro={() => console.log('Arrow Function agregarCarrito')}
 						productos={this.state.productos}
