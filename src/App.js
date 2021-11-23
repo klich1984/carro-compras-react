@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Productos from './components/Productos'
 
-
 class App extends Component {
 	// Estado inicial de productos
 	state = {
@@ -14,11 +13,11 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-        {/* Componente Productos */}
-        <Productos
-          agregarAlCarro={ () => console.log('Arrow Function agregarCarrito')}
-          productos={this.state.productos}
-        />
+				{/* Componente Productos */}
+				<Productos
+					agregarAlCarro={() => console.log('Arrow Function agregarCarrito')}
+					productos={this.state.productos}
+				/>
 			</div>
 		)
 	}
