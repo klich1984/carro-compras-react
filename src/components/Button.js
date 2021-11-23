@@ -13,7 +13,7 @@ const styles = {
 
 export default class Button extends Component {
 	render() {
-		console.log(this.props)
+		// console.log(this.props)
 		return (
 			<div>
 				<button {...this.props} style={styles.button}/>
